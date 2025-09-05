@@ -1,0 +1,283 @@
+/* Reset & Base style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #212529;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Container chính */
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+h1, h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #343a40;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+form input, form select {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+form input:focus {
+  border-color: #0d6efd;
+}
+
+/* Button */
+/* button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0d6efd;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #0b5ed7;
+} */
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse; /* gộp đường viền các ô liền kề */
+  margin-top: 20px;
+}
+
+table thead {
+  background: #0d6efd;
+  color: white;
+}
+
+table th, table td {
+  border: 1px solid #1d1d1d;
+  padding: 12px;
+  text-align: left;
+}
+
+/* table tr:nth-child(even) {
+  background-color: #8b8b8b;
+} */
+
+table tr:hover {
+  background-color: #e2e2e2;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  flex: 1;
+}
+
+.actions .edit {
+  background: #ffc107;
+  color: #212529;
+}
+
+.actions .edit:hover {
+  background: #e0a800;
+}
+
+.actions .delete {
+  background: #dc3545;
+}
+
+.actions .delete:hover {
+  background: #bb2d3b;
+}
+
+/* Base button style (áp dụng cho cả button và link) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  margin: 5px;
+  min-width: 80px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  text-align: center;
+  font-size: 15px;
+  color: white; /* mặc định chữ trắng */
+}
+
+/* Hiệu ứng bấm */
+.btn:active {
+  transform: scale(0.96);
+}
+
+/* Biến thể màu */
+/* Hành động chính (Save, Submit, Confirm, Go to List, v.v.) */
+.btn-primary {
+  background-color: #0d6efd;
+}
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+
+/* Tạo mới (Create, Add, Register, Approve) */
+.btn-success { 
+  background-color: #198754;
+}
+.btn-success:hover {
+  background-color: #157347;
+}
+
+/* Chỉnh sửa (Edit, Update, Reset Password, Cảnh báo nhẹ) */
+.btn-warning {
+  background-color: #ffc107;
+  color: #212529; /* chữ tối để dễ đọc */
+}
+.btn-warning:hover {
+  background-color: #e0a800;
+}
+
+/* Xóa (Delete, Remove, Cancel Order, Reject), hành động nguy hiểm/không hoàn tác */
+.btn-danger {
+  background-color: #dc3545;
+}
+.btn-danger:hover {
+  background-color: #bb2d3b;
+}
+
+/* Hành động phụ (Cancel, Back, Close, Discard), ít quan trọng hơn */
+.btn-secondary {
+  background-color: #6c757d;
+}
+.btn-secondary:hover {
+  background-color: #5c636a;
+}
+
+/* Biến thể viền (outline) */
+/* Các nút phụ trong form hoặc toolbar, khi muốn nhẹ nhàng, không nổi bật */
+.btn-outline {
+  background: transparent;
+  border: 2px solid currentColor;
+}
+
+.btn-outline.btn-primary {
+  color: #0d6efd;
+}
+.btn-outline.btn-primary:hover {
+  background: #0d6efd;
+  color: white;
+}
+
+.btn-outline.btn-danger {
+  color: #dc3545;
+}
+.btn-outline.btn-danger:hover {
+  background: #dc3545;
+  color: white;
+}
+
+/* Navbar tổng thể */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Logo trái, menu phải */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #0d6efd; /* xanh primary */
+  color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Logo */
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Container links */
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* Link item */
+.navbar-links .nav-link {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  transition: color 0.2s, border-bottom 0.2s;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+}
+
+/* Hover effect */
+.navbar-links .nav-link:hover {
+  color: #ffc107; /* vàng */
+  border-bottom: 2px solid #ffc107;
+}
+
+/* Active link (tùy chọn, có thể highlight route hiện tại) */
+.navbar-links .nav-link.active {
+  border-bottom: 2px solid white;
+}
+
+/* Sử dụng Flexbox để tạo bố cục form gọn gàng */
+.form-row {
+  display: flex; /* Biến container thành flex container */
+  align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+  margin-bottom: 15px; /* Thêm khoảng cách giữa các hàng */
+}
+
+/* Đảm bảo các label có cùng chiều rộng */
+.form-row label {
+  width: 120px; /* Đặt một chiều rộng cố định cho label */
+  text-align: right; /* Căn lề phải cho văn bản của label */
+  margin-right: 15px; /* Thêm khoảng cách giữa label và input */
+}
+
+/* Các trường input chiếm hết không gian còn lại */
+.form-row input {
+  flex-grow: 1; /* Cho phép input mở rộng để lấp đầy không gian còn lại */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Căn chỉnh nút Save */
+.form-row:last-child {
+  display: flex;
+  justify-content: flex-end; /* Di chuyển nút Save sang bên phải */
+}
